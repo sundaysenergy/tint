@@ -1,0 +1,166 @@
+/* @override http://travelsintype.com/sites/all/themes/zen/tint/layout.css?z */
+
+/* $Id: layout-fixed.css,v 1.5.2.3 2009/02/13 19:20:19 johnalbin Exp $
+ *
+ * LAYOUT STYLES
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+/** body **/
+body { }
+
+#page,
+#closure-blocks {
+    /*
+     * If you want to make the page a fixed width and centered in the viewport,
+     * this is the standards-compliant way to do that. See also the ie.css file
+     * for the necessary IE5 hack to center a div.
+     */
+    margin: 0 auto;
+    width: 960px;
+  	}
+
+#page-inner { padding: 0 12px 12px 12px; }
+
+/** header **/
+#header { height: 320px; margin-bottom: 40px;}
+#header-inner { }
+#logo-title { }
+#logo { float: left; }
+#site-name { }
+#site-slogan { }
+#header-blocks {
+	height: auto;
+	left: 50%;
+	margin-left: 238px;
+	position: absolute;
+	top: 0px;
+	width: 260px;
+	}
+
+/** main (container for everything else) **/
+#main { }
+#main-inner { }
+
+/** content **/
+#content,
+.no-sidebars #content {
+    float: left;
+    width: 928px;
+    margin-left: 0;
+    margin-right: -928px; /* Negative value of #content's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #content-inner. */
+	}
+
+.sidebar-left #content {
+    width: 728px;
+    margin-left: 200px; /* The width of #sidebar-left. */
+    margin-right: -928px; /* Negative value of #content's width + left margin. */
+	}
+
+.sidebar-right #content {
+    width: 728px;
+    margin-left: 0;
+    margin-right: -728px; /* Negative value of #content's width + left margin. */
+	}
+
+.two-sidebars #content {
+    width: 528px;
+    margin-left: 200px; /* The width of #sidebar-left */
+    margin-right: -728px; /* Negative value of #content's width + left margin. */
+	}
+
+#content-inner {
+    margin: 0;
+    padding: 0;
+	}
+
+/** navbar **/
+#navbar {
+    margin: -5px 0 0 -12px; /* margin-right is the Negative value of #navbar's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #navbar-inner. */
+    width: 960px;
+	}
+#navbar-inner { padding: 7px 12px; }
+
+#search-box { float: right; margin-top: -3px; text-align: right;}
+#primary { margin-right: 220px; /* Width of search-box */ }
+#secondary { margin-right: 220px; /* Width of search-box */ }
+#navbar ul { margin: 0; padding: 0; text-align: left; }
+#navbar li { display: inline; padding: 0 24px 0 0; }
+
+/** sidebar-left **/
+#sidebar-left {
+    float: left;
+    width: 200px;
+    margin-left: 0;
+    margin-right: -200px; /* Negative value of #sidebar-left's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #sidebar-left-inner. */
+    }
+
+#sidebar-left-inner {
+    margin: 0 20px 0 0;
+    padding: 0;
+    }
+
+/** sidebar-right **/
+#sidebar-right {
+    float: left;
+    width: 200px;
+    margin-left: 728px; /* Width of content + sidebar-left. */
+    margin-right: -928px; /* Negative value of #sidebar-right's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #sidebar-right-inner. */
+    }
+
+#sidebar-right-inner {
+    margin: 0 0 0 20px;
+    padding: 0;
+    }
+
+/** footer **/
+#footer { margin-top: 12px; }
+#footer-inner { }
+
+/** closure **/
+#closure-blocks { /* See also the #page declaration above that this div shares. */ }
+
+/** Prevent overflowing content **/
+#header,
+#content,
+#navbar,
+#sidebar-left,
+#sidebar-right,
+#footer,
+#closure-blocks {
+    overflow: visible;
+	word-wrap: break-word; /* A very nice CSS3 property */
+	}
+
+/* MAP 2 - http://www.travelsintype.com/type_photo_map/ */
+body.page-type-photo-map #header { height: auto; margin-bottom: 0;}
+body.page-type-photo-map #logo,
+body.page-type-photo-map #navbar,
+body.page-type-photo-map #block-user-0 {
+	margin: 0;
+	left: 80px;
+	padding: 0;
+	position: fixed;
+	top: 16px;
+	width: auto;
+	}
+body.page-type-photo-map #navbar-inner { padding: 0; }
+body.page-type-photo-map #primary, 
+body.page-type-photo-map #secondary { margin: 0; }
+body.page-type-photo-map #navbar ul { margin: 0; padding: 0; text-align: left; }
+body.page-type-photo-map #navbar li { display: inline; padding: 0 7px; }

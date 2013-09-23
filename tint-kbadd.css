@@ -1,0 +1,152 @@
+/* @override 
+	http://travelsintype.com/sites/all/themes/zen/tint/tint-kbadd.css?z
+	http://travelsintype.com/sites/all/themes/zen/tint/tint.css?z
+	http://www.travelsintype.com/sites/all/themes/zen/tint/tint-kbadd.css?z
+*/
+
+/* additional custom styles for travels in type.com */
+
+/* initial base type */
+* { font-family: Georgia, Times, "Times New Roman", serif; z-index: 2;}
+body { font-size: 16px; }
+#page { font-size: 100%; line-height: 1.5em }
+#main {
+  padding: 20px 0;
+  }
+#footer { font-size: 90%; }
+
+/* colors, backgrounds and design elements */
+/* colors:
+ * light blue	rgb(173,191,214)
+ * md brwn		rgb(92,82,73)
+ * lght brwn1	rgb(133,125,119)
+ * lght brwn2	rgb(173,168,165)
+ * green		rgb(113,116,14)
+ * grn brwn 2	rgb(77,72,34)
+ * brnt orange	rgb(173,102,61)
+ */
+
+body { background: rgb(92,82,73); color: #c5c1bf; /*rgb(133,125,119)*/ }
+#page { background: black; }
+
+/** default link styles **/
+a { color: rgb(113,116,14); text-decoration: none; }
+a:link { }
+a:visited { color: rgb(113,116,14); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:active { color: white; text-decoration: underline; }
+li.active a.active { color: white; text-decoration: underline; }
+
+div#navbar { background: rgb(173,102,61); z-index: 10; position: relative;}
+div#navbar ul li a {
+	color: rgb(173,191,214);
+	font-family: verdana, helvetica, arial, sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	}
+div#navbar ul li.active a.active { color: white; text-decoration: underline; }
+
+/** custom header nonsense **/
+#header_img {
+	border-bottom: 1px solid rgb(92,82,73);
+	height: 320px;
+	margin: 0 0 0 -12px;
+	width: 960px;
+	z-index: 3;
+	}
+
+#header_img div {
+	margin: 0 !important;
+	padding: 0 !important;  
+  }
+
+#header_img img {
+	height: 320px !important;
+	width: 960px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	}
+
+#header_img .views-admin-links {
+  display: none;
+  }
+
+#logo {
+	background: black;
+	margin-top: -312px;
+	position: relative;
+	width: 220px;
+	z-index: 10;
+	}
+
+#logo a img#logo-image {
+	margin: 7px 0 0 5px;
+	width: 200px;
+	}
+
+/* footer */
+#footer {border-top: 1px solid;}
+#footer-inner {margin-top: 10px;}		
+#footer-message { line-height: 1.5em; }		
+
+/* gallery / refresh block */
+#block-block-1 { background: black; padding: 5px 8px;}
+#block-block-1 .block-inner { }
+#block-block-1 .block-inner .content p { color: rgb(133,125,119); margin: 0; }
+#block-block-1 .block-inner .content p a { color: rgb(92,82,73); margin: 0; text-decoration: underline;}
+
+/** Unique to Gallery **/
+body.page-gallery div.view-tint-photo-gallery .item-list ul { margin: 0; padding: 0; }
+body.page-gallery div.view-tint-photo-gallery .item-list ul li { 
+	float: left;
+	list-style: none;
+	}
+body.page-gallery div.view-tint-photo-gallery .item-list ul li div.views-field-field-tint-gallery-fid,
+body.page-gallery div.view-tint-photo-gallery .item-list ul li div.views-field-view-node {
+	display: block;
+	margin: 10px;
+	}
+
+/* MAP SPECIFIC CSS */
+body.page-map-node h2 { margin-top: 0; font-size: 200%; }
+
+/* MAP 2 - http://www.travelsintype.com/type_photo_map/ */
+body.page-type-photo-map #page,
+body.page-type-photo-map div#gmap-auto1map-gmap0 {
+	height: 100% !important;
+	left: 0;
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	}
+body.page-type-photo-map #search-box,
+body.page-type-photo-map #sidebar-left,
+body.page-type-photo-map #footer,
+body.page-type-photo-map #header img#header_img,
+body.page-type-photo-map #block-user-0 h2.title,
+body.page-type-photo-map #block-user-0 .item-list ul  {
+	display: none;
+	}
+body.page-type-photo-map #header #logo-title #logo {
+	background: black;
+	display: block;
+	float: none;
+	width: 110px;
+	z-index: 10;
+	}
+body.page-type-photo-map #logo a img#logo-image { margin: 4px 0 0 2px; width: 100px; }
+body.page-type-photo-map div#navbar { top: 120px; z-index: 10;}
+body.page-type-photo-map div#navbar #navbar-inner { padding: 7px 0; }
+
+/** hiding things with display: none **/
+div#skip-to-nav,
+div.feed-icons,
+div#search label,
+body.page-map-node h1.title {
+	display: none;
+	}
+
+/* by kristian bjørnard 2009 */
+/* www.kristianbjornard.com */
+/* www.betterlivingthroughsustainability.com */
